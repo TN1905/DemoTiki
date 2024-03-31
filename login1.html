@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 1</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login1.css">
+
+</head>
+<body ng-app="myLogin" ng-controller="loginCtrl">
+    <section class="wrapper" style="background-image: url('images/bg.png');">
+        <div class="container">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+                <div class="logo text-center">
+                    <img src="images/logo.png" class="img-fluid" alt="logo">
+                </div>
+                <form class="rounded bg-white shadow p-5" name="frmSignIn" ng-submit="login()">
+                    <h3 class="text-dark fw-bolder fs-4 mb-2 text-center">Sign in to Popo Shop</h3>
+
+                    <div class="fw-nomal text-muted mb-4 text-center">
+                        New Here? <a href="sign-up.html" class="text-primary fw-bold text-decoration-none">Create an Account</a>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Username:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="email" class="form-control" id="username" placeholder="name@example.com" ng-model="user.username"
+                                name="txtEmailName" required>
+                        </div>
+                        <span ng-show="frmSignIn.txtEmailName.$invalid" style="color: red;">Please type username</span>
+                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Password:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="password" class="form-control" id="password" placeholder="*********" ng-model="user.password"
+                                name="txtPassword" required>
+                        </div>
+                        <span ng-show="frmSignIn.txtPassword.$invalid" style="color: red;">Please type password</span>
+                    
+                    </div>
+
+                    <div class="mt-2 text-end">
+                        <a href="#" class="text-primary fw-bold text-decoration-none">Forget Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit_btn w-100 my-4">Login</button>
+
+                    <div class="text-center text-muted text-uppercase mb-3">
+                        or
+                    </div>
+
+                    <a href="#" class="btn btn-light login_with w-100 mb-3">
+                        <img src="images/google-icon.svg" alt="" class="img-fluid me-3">Continue with Google
+                    </a>
+
+                    <a href="#" class="btn btn-light login_with w-100 mb-3">
+                        <img src="images/facebook-icon.svg" alt="" class="img-fluid me-3">Continue with Facebook
+                    </a>
+
+                    <a href="#" class="btn btn-light login_with w-100 mb-3">
+                        <img src="images/linkedin-icon.svg" alt="" class="img-fluid me-3">Continue with LinkedIn
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/3580c0d03d.js" crossorigin="anonymous"></script>
+    
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.min.js"></script>
+    <script>
+        var app = angular.module("myLogin", ["ngRoute"]);
+        
+        app.controller('loginCtrl', function ($scope,$location, $window) {
+            $scope.user = {
+                username: '',
+                password: ''
+            };
+
+            $scope.login = function () {
+                // Validate user credentials here
+                // For example, you can compare with stored user data in local storage
+                var storedUser = JSON.parse(localStorage.getItem('user'));
+                console.log(storedUser); 
+                if (storedUser && storedUser.username === $scope.user.username && storedUser.password === $scope.user.password) {
+                    alert('Login successful!');
+                    // Redirect to the main dashboard or home page
+                    $window.location.href = '/home.html';
+
+                     
+                    
+                } else {
+                    alert('Invalid user name or password.');
+                }
+            };
+            
+        });
+        
+    </script>
+</body>
+</html>

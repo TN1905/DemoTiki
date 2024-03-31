@@ -1,0 +1,103 @@
+[
+    {
+        "image": "images/gau.png",
+        "name": "Đồ Chơi - Mẹ & Bé"
+    },
+    {
+        "image": "images/dienthoai.png",
+        "name": "Điện Thoại - Máy Tính Bảng"
+    },
+    {
+        "image": "images/ngon.png",
+        "name": "NGON"
+    },
+    {
+        "image": "images/son.png",
+        "name": "Làm Đẹp - Sức Khỏe"
+    },
+    {
+        "image": "images/lovisong.png",
+        "name": "Điện Gia Dụng"
+    },
+    {
+        "image": "images/dam.png",
+        "name": "Thời Trang Nữ"
+    },
+    {
+        "image": "images/aothun.png",
+        "name": "Thời Trang Nam"
+    },
+    {
+        "image": "images/guoc.png",
+        "name": "Giày - Dép Nữ"
+    },
+    {
+        "image": "images/tuinu.png",
+        "name": "Túi Thời Trang Nữ"
+    },
+    {
+        "image": "images/giaynam.png",
+        "name": "Giày - Dép Nam"
+    },
+    {
+        "image": "images/vali.png",
+        "name": "Balo Và Vali"
+    },
+    {
+        "image": "images/matkinh.png",
+        "name": "Phụ Kiện Thời Trang"
+    },
+    {
+        "image": "images/dongho.png",
+        "name": "Đồng Hồ Và Trang Sức"
+    },
+    {
+        "image": "images/laptop.png",
+        "name": "Latop - Máy Vi Tính - Linh Kiện"
+    },
+    {
+        "image": "images/noi.png",
+        "name": "Nhà Cửa - Đời Sống"
+    },
+    {
+        "image": "images/internet.png",
+        "name": "Cross Border - Hàng Quốc Tế"
+    },
+    {
+        "image": "images/dauan.png",
+        "name": "Bách Hóa Online"
+    },
+    {
+        "image": "images/tainghe.png",
+        "name": "Thiết Bị Số - Phụ Kiện Số"
+    },
+    {
+        "image": "images/card.png",
+        "name": "Voucher - Dịch Vụ"
+    },
+    {
+        "image": "images/xemay.png",
+        "name": "Ô tô - Xe Máy - Xe Đạp"
+    },
+    {
+        "image": "images/sach.png",
+        "name": "Nhà Sách Tiki"
+    },
+    {
+        "image": "images/camera.png",
+        "name": "Điện Tử - Điện Lạnh"
+    },
+    {
+        "image": "images/banh.png",
+        "name": "Thể Thao - Dã Ngoại"
+    },
+    {
+        "image": "images/mayanh.png",
+        "name": "Máy Ảnh - Máy Quay Phim"
+    },
+    {
+        "image": "images/tiki.jpg",
+        "name": "Sản Phẩm Tài Chính - Bảo Hiểm"
+    }
+]
+

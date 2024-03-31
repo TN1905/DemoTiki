@@ -1,0 +1,42 @@
+[
+    {
+        "image": "images/astra.png",
+        "name": "Astra Reward"
+    },
+    {
+        "image": "images/tiki.jpg",
+        "name": "Tiki Exchange"
+    },
+    {
+        "image": "images/now.png",
+        "name": "Tốt & Nhanh"
+    },
+    {
+        "image": "images/re.png",
+        "name": "Giá Rẻ Mỗi Ngày"
+    },
+    {
+        "image": "images/xakho.png",
+        "name": "Xả Kho"
+    },
+    {
+        "image": "images/discount.png",
+        "name": "Mã giảm giá"
+    },
+    {
+        "image": "images/vi.png",
+        "name": "Ưu đãi thẻ, ví"
+    },
+    {
+        "image": "images/tien.png",
+        "name": "Đóng tiền, nạp thẻ"
+    },
+    {
+        "image": "images/paylater.png",
+        "name": "Mua trước trả sau"
+    },
+    {
+        "image": "images/360.png",
+        "name": "Bảo hiểm tiki360"
+    }
+]

@@ -1,0 +1,99 @@
+[
+    [
+        {
+            "discount": "-0.75",
+            "image": "images/g1.png",
+            "price": 14000,
+            "percent": "0.25"
+        },
+        {
+            "discount": "-0.21",
+            "image": "images/g2.png",
+            "price": 107000,
+            "percent": "0.32"
+        },
+        {
+            "discount": "-0.05",
+            "image": "images/g3.jpg",
+            "price": 75000,
+            "percent": "0.5"
+        },
+        {
+            "discount": "-0.34",
+            "image": "images/g4.jpg",
+            "price": 11600,
+            "percent": "0.22"
+        },
+        {
+            "discount": "-0.41",
+            "image": "images/g5.jpg",
+            "price": 52000,
+            "percent": "0.6"
+        }
+    ],
+    [
+        {
+            "discount": "-0.11",
+            "image": "images/g6.jpg",
+            "price": 31000,
+            "percent": "0.04"
+        },
+        {
+            "discount": "-0.27",
+            "image": "images/g7.jpg",
+            "price": 32000,
+            "percent": "0.27"
+        },
+        {
+            "discount": "-0.09",
+            "image": "images/g8.jpg",
+            "price": 44000,
+            "percent": "0.09"
+        },
+        {
+            "discount": "-0.66",
+            "image": "images/g9.jpg",
+            "price": 56000,
+            "percent": "0.11"
+        },
+        {
+            "discount": "-0.55",
+            "image": "images/g10.jpg",
+            "price": 10000,
+            "percent": "0.8"
+        }
+    ],
+    [
+        {
+            "discount": "-0.08",
+            "image": "images/g11.png",
+            "price": 27000,
+            "percent": "0.42"
+        },
+        {
+            "discount": "-0.2",
+            "image": "images/g12.jpg",
+            "price": 30000,
+            "percent": "0.88"
+        },
+        {
+            "discount": "-0.8",
+            "image": "images/g13.JPG",
+            "price": 44000,
+            "percent": "0.02"
+        },
+        {
+            "discount": "-0.32",
+            "image": "images/g14.jpg",
+            "price": 11000,
+            "percent": "0.54"
+        },
+        {
+            "discount": "-0.75",
+            "image": "images/g15.jpg",
+            "price": 22000,
+            "percent": "0.06"
+        }
+    ]
+]
+    

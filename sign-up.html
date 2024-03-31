@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sign-up.css">
+</head>
+
+<body ng-app="mySignUp" ng-controller="myRegister">
+    <section class="wrapper" style="background-image: url('images/bg.png');">
+        <div class="container">
+            <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+                <div class="logo text-center">
+                    <img src="images/logo.png" class="img-fluid" alt="logo">
+                </div>
+                <form class="rounded bg-white shadow p-5" name="frmSignUp">
+                    <h3 class="text-dark fw-bolder fs-4 mb-2 text-center">Create an Account</h3>
+
+                    <div class="fw-nomal text-muted mb-2 text-center">
+                        Already have an account? <a href="login1.html" class="text-primary fw-bold text-decoration-none">Sign in here</a>
+                    </div>
+
+                    <div class="text-center text-muted text-uppercase mb-2">or</div>
+
+                    <a href="#" class="btn btn-light login_with w-100 mb-4">
+                        <img src="images/google-icon.svg" alt="" class="img-fluid me-3">Sign in with Google
+                    </a>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Firstname:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="text" class="form-control" id="firstname" placeholder="Firstname" 
+                                ng-model="user.firstname" name="txtFirstName" required>
+                        </div>
+                        <span ng-show="frmSignUp.txtFirstName.$invalid" style="color: red;">Please type first name</span>
+                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Lastname:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="text" class="form-control" id="lastname" placeholder="Lastname" 
+                                ng-model="user.lastname" name="txtLastName" required>
+                        </div>
+                        <span ng-show="frmSignUp.txtLastName.$invalid" style="color: red;">Please type last name</span>
+                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Username:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="email" class="form-control" id="username" placeholder="name@example.com" ng-model="user.username"
+                                name="txtEmailName" required>
+                        </div>
+                        <span ng-show="frmSignUp.txtEmailName.$invalid" style="color: red;">Please type username</span>
+                    
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Password:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="password" class="form-control" id="password" placeholder="*********" ng-model="user.password"
+                                name="txtPassword" required>
+                        </div>
+                        <span ng-show="frmSignUp.txtPassword.$invalid" style="color: red;">Please type password</span>
+                    
+                    </div>    
+                    <div class="mb-3">
+                        <label for="name" class="form-label">
+                            <h6>Confirm Password:</h6>
+                        </label>
+                        <div class="input-group" style="margin-bottom: 10px;">
+                            <input type="password" class="form-control" id="confirmpassword" placeholder="*********" ng-model="user.confirmpassword"
+                                name="txtConfirmPassword" required>
+                        </div>
+                        <span ng-if="frmSignUp.txtConfirmPassword.$invalid" style="color: red;">Please type confirm password</span>
+                        <span ng-if="user.password != user.confirmpassword && frmSignUp.txtConfirmPassword.$valid" style="color: red;">Password not match</span>
+                    
+                    </div>
+
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" name="TnC" type="checkbox" id="gridCheck" checked>
+                        <label class="form-check-label ms-2" for="gridCheck">
+                            I Agree <a href="#">Terms and conditions</a>.
+                        </label>
+                        <span ng-show="frmSignUp.TnC.$invalid">Vui lòng check</span>
+                    </div> 
+
+                    <button type="submit" class="btn btn-primary submit_btn w-100 my-4" ng-click="register()">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module("mySignUp",[]);
+        app.controller("myRegister",function($scope){
+            $scope.user = {
+                firstname: '',
+                lastname: '',
+                username: '',
+                password: '',
+                confirmpassword: ''
+            };
+
+            $scope.register = function () {
+                // Validate password and confirm password match
+                if ($scope.user.password !== $scope.user.confirmpassword) {
+                    alert('Password and Confirm Password do not match.');
+                    return;
+                }
+
+                // Save user data to local storage
+                localStorage.setItem('user', JSON.stringify($scope.user));
+                alert('Registration successful!');
+            };
+        })
+    </script>
+</body>
+
+</html>

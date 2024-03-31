@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/home.css">
+        <title>Popo Tiki</title>
+    </head>
+    <body ng-app="myApp"  ng-controller="myCtrl">
+        
+
+        <header class="row header-tiki" style="line-height: 1.15;background-color: #fff;">
+            <div class="col-lg-2 text-center d-none d-lg-block" style="padding: 8px 0;">
+                <a href="home.html"><img src="images/4e6e925ea554fc698123ea71ed7bda26.png" width="72" height="72" alt=""></a>
+            </div>
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-sm-7 p-3">
+                        <div class="input-group" >
+                            <div class="input-group-text text-white bg-white" style="border-right: none;border-top-left-radius: 10px;border-bottom-left-radius: 10px;"><img src="images/6fef2e788f00a16dc7d5a1dfc5d0e97a.png" style="width: 20px;" height="20px" alt=""></div>
+                            <input type="text" class="form-control" style="border-left: none;" id="autoSizingInputGroup" ng-model="searchQuery" placeholder="Bạn tìm thấy gì hôm nay?">
+                            <div class="input-group-text bg-white" style="color: rgb(10, 104, 255);border-top-right-radius: 10px;border-bottom-right-radius: 10px;"><a  style="text-decoration: none;" href="#!timkiem">Tim kiếm</a></div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-5 p-4">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p><a href="#" style="text-decoration: none;"><i class="fa-solid fa-house me-2"></i>Trang chủ</a></p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p><a href="#" style="text-decoration: none;color: rgb(128, 128, 137);"><i class="fa-solid fa-crown me-2"></i>Astra</a></p>
+                            </div>
+                            <div class="col-sm-3 show-info"> <!-- Gộp hai thuộc tính class thành một -->
+                            <p><a href="#" style="text-decoration: none; color: rgb(128, 128, 137);"><i class="fa-regular fa-face-smile-wink me-2"></i>Tài khoản</a></p>
+                            <div class="Userstyle__UserDropDownRevamp-sc-6e6am-17 hvGJCW toggler account"><a 
+                                    href="" style="text-decoration: none;">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" class="Userstyle__UserDropDownItemRevamp-sc-6e6am-18 brEmWQ"
+                                        >
+                                        Đăng nhập
+                                        
+                                    </button>
+                                    
+                                </a><a  href="sign-up.html" style="text-decoration: none;">
+                                    <p title="Đơn hàng của tôi" class="Userstyle__UserDropDownItemRevamp-sc-6e6am-18 brEmWQ">Đăng Ký</p>
+                                </a><a data-view-id="header_header_account_item" style="text-decoration: none;" >
+                                    <p title="Đăng xuất" class="Userstyle__UserDropDownItemRevamp-sc-6e6am-18 brEmWQ">Đơn hàng</p>
+                                </a></div>
+                            </div>
+                            <div class="col-sm-3">
+                                <a href="#!cart" class="header-btn header-cart">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <span class="cart-number">{{sanphamtronggiohang}}</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="col-sm-7 d-flex justify-content-around nav-list">
+                            <a href="#">Khỏe đẹp</a>
+                            <a href="#">Sách</a>
+                            <a href="#">Bách hóa</a>
+                            <a href="#">Trái cây</a>
+                            <a href="#">Thịt, trứng</a>
+                            <a href="#">Rau củ quả</a>
+                            <a href="#">Sữa, bơ, phô mai</a>
+                            <a href="#">Hải sản</a>
+                            <a href="#">Gạo, mì ăn liền</a>
+                        </div>
+                        <div class="col-sm-3 offset-sm-1" style="color: rgb(128, 128, 137);margin-right: 50px;">
+                            <i class="fa-solid fa-location-dot me-2"></i>
+                            Giao đến: <a href="#" style="color: black;">Q.1, P.Bến Nghé, Hồ Chí Minh</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <ng-view>
+
+        </ng-view>
+        
+        <script src="https://kit.fontawesome.com/3580c0d03d.js" crossorigin="anonymous"></script>
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+        <script src="angular.min.js"></script>
+        <script src="angular-route.min.js"></script>
+        <script src="tikipopo.js"></script>
+    </body>
+    </html>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="row" style="margin: 5px;">
+                            <div class="form-group col-sm-12">
+                                <label for=""><strong>Tên đăng nhập</strong></label>
+                                <input type="text" class="form-control" placeholder="Tên đăng nhập">
+                            </div>
+                        </div>
+                        <div class="row" style="margin: 5px;">
+                            <div class="form-group col-sm-12">
+                                <label for=""><strong>Mật khẩu</strong></label>
+                                <input type="text" class="form-control" placeholder="******">
+                            </div>
+                        </div>
+                        <div class="row" style="margin: 5px;">
+                            <div class="form-group col-sm-12">
+                                <button class="btn btn-primary">Đăng nhập</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-light save-button ">Login</button>
+                    <button type="button" class="btn btn-light cancel-button">Hủy</button>
+                </div>
+            </div>
+        </div>
+    </div>
